@@ -1,0 +1,164 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  background: white;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.choice-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+.choice-list .choice-list_item {
+  box-shadow: 0px 10px 10px 0px #c5c9c9;
+  display: flex;
+  background-color: #f2f3f5;
+  border-radius: 15px;
+  height: 50px;
+  width: 270px;
+  margin: 15px;
+  padding: 10px 15px;
+}
+.choice-list .choice-list_item-number {
+  background-color: #9356DC;
+  border-radius: 15px;
+  color: white;
+  padding: 5px 10px;
+  position: absolute;
+  left: 0px;
+}
+
+@media (min-width: 678px) {
+  .choice-list {
+    flex-direction: row;
+  }
+}
+.restaurant--card {
+  margin: 20px;
+  width: 280px;
+  background-color: white;
+  box-shadow: 0px 10px 10px 0px #c5c9c9;
+  position: relative;
+  border-radius: 25px;
+}
+
+.restaurant--card a {
+  text-decoration: none;
+  color: black;
+}
+
+.restaurant--card_new {
+  padding: 5px 15px;
+  border-radius: 5px;
+  background-color: #99E2D0;
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  right: 10px;
+  top: 20px;
+}
+
+.restaurant {
+  margin-top: 30px;
+  padding-bottom: 30px;
+  background-color: #f2f3f5;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}
+
+.restaurant h2 {
+  padding-left: 20px;
+}
+
+.restaurant .restaurant--list {
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.restaurant--card img {
+  width: 100%;
+  height: 150px;
+  border-radius: 25px 25px 0 0;
+  object-fit: cover;
+}
+
+.card--description {
+  padding: 10px 15px;
+}
+
+.footer-container {
+  display: flex;
+  background-color: #333333;
+  color: white;
+  flex-direction: column;
+}
+.footer-container .footer-container_link {
+  text-decoration: none;
+  color: #f4f4f4;
+}
+
+.logo {
+  text-align: center;
+  margin: 20px 0 10px 0;
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 15px;
+  text-align: center;
+  background: linear-gradient(180deg, #a7a7a7 0%, #e2e2e2 15%);
+}
+.location .location_text {
+  flex-basis: 150px;
+  color: #4d4d4d;
+  font-weight: bold;
+}
+
+.explore {
+  background-color: #f4f4f4;
+  text-align: center;
+  height: 200px;
+}
+.explore .explore_title {
+  font-size: 150%;
+  font-weight: bold;
+  padding: 25px;
+}
+.explore .explore_txt {
+  color: #4d4d4d;
+  padding: 0 25px 25px 25px;
+}
+.explore .explore_btn {
+  border-radius: 30px;
+  color: #fff;
+  padding: 10px;
+  background: #ff79da;
+  background: linear-gradient(175deg, #ff79da 0%, #9356dc 98%);
+  box-shadow: 3px 3px 14px 0px blue;
+}
+.explore .anchor {
+  text-decoration: none;
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */

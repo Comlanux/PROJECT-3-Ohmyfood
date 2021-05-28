@@ -1,0 +1,33 @@
+.choice-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+    
+ .choice-list_item{
+  box-shadow: 0px 10px 10px 0px #c5c9c9;
+  display: flex;
+  background-color: #f2f3f5;
+  border-radius: 15px;
+  height: 50px;
+  width: 270px;
+  margin: 15px;
+  padding: 10px 15px;
+    }
+    
+    .choice-list_item-number {
+        background-color: #9356DC;
+        border-radius: 15px;
+        color: white;
+        padding: 5px 10px;
+        position: absolute;
+        left:0px;
+    }
+  }
+
+  @media(min-width:678px) {
+    .choice-list {
+      flex-direction: row;
+    }
+  }
