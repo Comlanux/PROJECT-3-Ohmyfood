@@ -28,12 +28,12 @@ body {
   text-align: center;
   height: 200px;
 }
-.explore .explore_title {
+.explore .explore__title {
   font-size: 150%;
   font-weight: bold;
   padding: 25px;
 }
-.explore .explore_txt {
+.explore .explore__txt {
   color: #4d4d4d;
   padding: 0 25px 25px 25px;
 }
@@ -97,11 +97,6 @@ body {
   border-radius: 25px;
 }
 
-.restaurant--card a {
-  text-decoration: none;
-  color: black;
-}
-
 .restaurant--card__new {
   padding: 5px 15px;
   border-radius: 5px;
@@ -113,13 +108,16 @@ body {
   top: 20px;
 }
 
+.restaurant--card a {
+  text-decoration: none;
+  color: black;
+}
+
 .restaurant {
   margin-top: 30px;
   padding-bottom: 30px;
   background-color: #f2f3f5;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   flex-direction: column;
 }
 
@@ -127,7 +125,7 @@ body {
   padding-left: 20px;
 }
 
-.restaurant .restaurant--list {
+.restaurant .restaurant__list {
   display: flex;
   -webkit-box-direction: normal;
   -webkit-box-orient: horizontal;
@@ -172,7 +170,7 @@ body {
   text-align: center;
   background: linear-gradient(180deg, #a7a7a7 0%, #e2e2e2 15%);
 }
-.location .location_text {
+.location .location__text {
   flex-basis: 150px;
   color: #4d4d4d;
   font-weight: bold;
