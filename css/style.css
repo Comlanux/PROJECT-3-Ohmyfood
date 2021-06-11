@@ -22,6 +22,12 @@ body {
 body {
   font-family: "Roboto", sans-serif;
 }
+body .restaurant--name {
+  font-family: "shrikhand", cursive;
+}
+body .site--name {
+  font-family: "shrikhand", cursive;
+}
 
 .explore {
   background-color: #f4f4f4;
@@ -155,6 +161,150 @@ body {
   text-decoration: none;
   color: #f4f4f4;
   list-style: none;
+}
+.footer h3 {
+  font-family: "Shrikhand", cursive;
+  color: #f4f4f4;
+  font-size: 120%;
+  padding-bottom: 20px;
+}
+
+.background-img {
+  width: 100%;
+  object-fit: cover;
+  max-width: 100%;
+  height: 250px;
+}
+
+.menu {
+  background-color: #f4f4f4;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  position: relative;
+  padding: 30px 5%;
+  margin-top: -70px;
+  max-width: 1300px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header .header__title {
+  font-size: 150%;
+  font-weight: bold;
+  font-family: "shrikhand", cursive;
+  margin-bottom: 0;
+  padding-left: 5px;
+}
+
+.heart-container {
+  width: 10%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-container__icon {
+  font-size: 150%;
+  cursor: pointer;
+  position: absolute;
+  margin: 5px;
+}
+.header-container__icon--full {
+  font-size: 150%;
+  cursor: pointer;
+  position: absolute;
+  margin: 5px;
+  color: transparent;
+  transform: scale(0.3);
+  transition: transform 300ms;
+}
+
+.submenu {
+  display: flex;
+}
+.submenu .submenu__title {
+  color: #4d4d4d;
+  position: relative;
+  padding-bottom: 5px;
+  margin-top: 20px;
+}
+
+.menu-item {
+  background-color: #fff;
+  border-radius: 15px;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 3px 3px 14px 0px #a7a7a7;
+  overflow: hidden;
+  position: relative;
+}
+.menu-item__text {
+  padding: 10px;
+  width: 70%;
+  transition: width 1s;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu-item__price {
+  font-weight: bold;
+  padding: 34px 10px 0 0;
+  transition: 1s;
+  transform: translateX(65px);
+  position: absolute;
+  right: 80px;
+}
+
+.menu-item .check {
+  background-color: #99e2d0;
+  color: #fff;
+  font-size: 150%;
+  padding: 23px;
+  transition: width 1s;
+  transform: translateX(70px);
+  position: absolute;
+  right: 0;
+  width: 30px;
+}
+
+.menu-item__text h4:first-child {
+  margin-bottom: 5px;
+  margin-top: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.menu-item__text p:last-child {
+  margin: 0;
+  color: #4d4d4d;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.order-btn {
+  border-radius: 30px;
+  color: #fff;
+  background: #ff79da;
+  background: linear-gradient(175deg, #FF79DA 0%, #9356DC 98%);
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 0px;
+  box-shadow: 3px 3px 14px 0px #a7a7a7;
+  transform: scale(1);
+  transition: transform 400ms;
+  max-width: 120px;
+  text-align: center;
+  margin-top: 30px;
 }
 
 .logo {
