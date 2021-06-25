@@ -5,6 +5,20 @@
     height: 250px;
 }
 
+.logo {
+    position: relative;
+}
+
+.logo__icon {
+    position: absolute;
+     top: 0;
+    left: 0;
+    bottom: 0;
+     width: 50px;
+    font-size: 130%;
+    color: black;
+}
+
 .menu {
     background-color: #f4f4f4;
     border-top-left-radius: 40px;
@@ -36,112 +50,102 @@
     justify-content: flex-end;
 }
 
-.header-container__icon {
-    font-size: 150%;
-    cursor: pointer;
-    position: absolute;
-    margin: 5px;
-
-    &--full{
-        font-size: 150%;
-        cursor: pointer;
-        position: absolute;
-        margin: 5px;
-        color: transparent;
-        transform: scale(0.3);
-        transition: transform 300ms;
-    }
-}
-
 .submenu {
     display: flex;
-
-    .submenu__title {
-        color: #4d4d4d;
-        position: relative;
-        padding-bottom: 5px;
-        margin-top: 20px;
-    }
+    flex-direction: column;
 }
 
-.menu-item {
-    background-color: #fff;
-    border-radius: 15px;
-    height: 70px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    box-shadow: 3px 3px 14px 0px #a7a7a7;
-    overflow: hidden;
+.submenu__title {
+    color: #4d4d4d;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    }
+    .submenu__title::after{
+    content: '';
+     display: block;
+     width: 40px;
+     background-color: #99e2d0;
+     height: 3px;
+    }
+
+
+input {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+}
+
+.checkbox-menu-item {
+    display: none;
+}
+
+.checkbox-menu-item:checked + label .card-checked {
+    width: 50px;
+}
+
+.check__icon{
+    transform: rotate(0deg);
+    transition-duration: 600ms;
+}
+
+.card {
     position: relative;
-
-    &__text {
-        padding: 10px;
-        width: 70%;
-        transition: width 1s;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-
-    
-    }
-
-    &__price {
-        font-weight: bold;
-        padding: 34px 10px 0 0;
-        transition: 1s;
-        transform: translateX(65px);
-        position: absolute;
-        right: 80px;
-    }
+    display: flex;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 3px 3px 14px 0px #a7a7a7;
+    justify-content: space-between;
+    overflow: hidden;
 }
 
-.menu-item .check {
+.card-body {
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.card-title {
+display: block;
+}
+
+.card-text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    color: #4d4d4d;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+.card-checked {
+    width: 0;
+    overflow:hidden ;
     background-color: #99e2d0;
     color: #fff;
     font-size: 150%;
-    padding: 23px;
-    transition: width 1s;
-    transform: translateX(70px);
-    position: absolute;
-    right: 0;
-    width: 30px;
-
+    transition: 1s;
 }
 
-.menu-item__text h4:first-child {
-    margin-bottom: 5px;
-    margin-top: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+
+.order-btn {
+    border-radius: 30px;
+    color: #fff;
+    background: #ff79da;
+    background: linear-gradient(175deg, #FF79DA 0%, #9356DC 98%);
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+    width: 30%;
+    margin: 0 auto;
+        margin-top: 0px;
+    box-shadow: 3px 3px 14px 0px #a7a7a7;
+    transform: scale(1);
+    transition: transform 400ms;
+    max-width: 120px;
+    text-align: center;
+    margin-top: 30px;
 }
-
- .menu-item__text p:last-child {
-        margin: 0;
-        color: #4d4d4d;
-        width: 100%;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
- }
-
- .order-btn {
-        border-radius: 30px;
-        color: #fff;
-        background: #ff79da;
-        background: linear-gradient(175deg, #FF79DA 0%, #9356DC 98%);
-        padding: 10px;
-        cursor: pointer;
-        user-select: none;
-        width: 30%;
-        margin: 0 auto;
-            margin-top: 0px;
-        box-shadow: 3px 3px 14px 0px #a7a7a7;
-        transform: scale(1);
-        transition: transform 400ms;
-        max-width: 120px;
-        text-align: center;
-        margin-top: 30px;
- }
-

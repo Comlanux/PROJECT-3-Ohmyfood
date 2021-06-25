@@ -1,0 +1,32 @@
+.heart {
+    fas{
+        display: none;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    &__checkbox {
+        display: none;
+    
+
+      &:checked + label {
+        background: rgb(180,13,175);
+        background:linear-gradient(175deg, #ff79da 0%, #9356dc 98%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        font-size: 150%;
+        position: absolute;
+        right: 20px;
+        top: 75%;
+
+        .fas {
+            display: inline;
+        }
+
+        .far {
+            display: none;
+        }
+      }
+    }  
+}

@@ -59,6 +59,32 @@ body .site--name {
   color: #fff;
 }
 
+.heart fas {
+  display: none;
+  display: flex;
+  flex-direction: row;
+}
+.heart__checkbox {
+  display: none;
+}
+.heart__checkbox:checked + label {
+  background: #b40daf;
+  background: linear-gradient(175deg, #ff79da 0%, #9356dc 98%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 150%;
+  position: absolute;
+  right: 20px;
+  top: 75%;
+}
+.heart__checkbox:checked + label .fas {
+  display: inline;
+}
+.heart__checkbox:checked + label .far {
+  display: none;
+}
+
 .choice-list {
   list-style: none;
   display: flex;
@@ -176,6 +202,20 @@ body .site--name {
   height: 250px;
 }
 
+.logo {
+  position: relative;
+}
+
+.logo__icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  font-size: 130%;
+  color: black;
+}
+
 .menu {
   background-color: #f4f4f4;
   border-top-left-radius: 40px;
@@ -205,87 +245,83 @@ body .site--name {
   justify-content: flex-end;
 }
 
-.header-container__icon {
-  font-size: 150%;
-  cursor: pointer;
-  position: absolute;
-  margin: 5px;
-}
-.header-container__icon--full {
-  font-size: 150%;
-  cursor: pointer;
-  position: absolute;
-  margin: 5px;
-  color: transparent;
-  transform: scale(0.3);
-  transition: transform 300ms;
-}
-
 .submenu {
   display: flex;
+  flex-direction: column;
 }
-.submenu .submenu__title {
+
+.submenu__title {
   color: #4d4d4d;
-  position: relative;
-  padding-bottom: 5px;
-  margin-top: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
-.menu-item {
-  background-color: #fff;
-  border-radius: 15px;
-  height: 70px;
+.submenu__title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  background-color: #99e2d0;
+  height: 3px;
+}
+
+input {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+.checkbox-menu-item {
+  display: none;
+}
+
+.checkbox-menu-item:checked + label .card-checked {
+  width: 50px;
+}
+
+.check__icon {
+  transform: rotate(0deg);
+  transition-duration: 600ms;
+}
+
+.card {
+  position: relative;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: #fff;
   box-shadow: 3px 3px 14px 0px #a7a7a7;
+  justify-content: space-between;
   overflow: hidden;
-  position: relative;
-}
-.menu-item__text {
-  padding: 10px;
-  width: 70%;
-  transition: width 1s;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.menu-item__price {
-  font-weight: bold;
-  padding: 34px 10px 0 0;
-  transition: 1s;
-  transform: translateX(65px);
-  position: absolute;
-  right: 80px;
 }
 
-.menu-item .check {
+.card-body {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.card-title {
+  display: block;
+}
+
+.card-text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  color: #4d4d4d;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-checked {
+  width: 0;
+  overflow: hidden;
   background-color: #99e2d0;
   color: #fff;
   font-size: 150%;
-  padding: 23px;
-  transition: width 1s;
-  transform: translateX(70px);
-  position: absolute;
-  right: 0;
-  width: 30px;
-}
-
-.menu-item__text h4:first-child {
-  margin-bottom: 5px;
-  margin-top: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.menu-item__text p:last-child {
-  margin: 0;
-  color: #4d4d4d;
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  transition: 1s;
 }
 
 .order-btn {
