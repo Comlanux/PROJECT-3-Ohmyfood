@@ -1,0 +1,36 @@
+.menu-item{
+    display: flex;
+    flex-direction: column;
+
+    .menu-item__card{
+        position: relative;
+        display: flex;
+        border-radius: 15px;
+        cursor: pointer;
+        background-color: #fff;
+        box-shadow: 3px 3px 14px 0px #a7a7a7;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+
+    &__card-body{
+        flex-grow: 1;
+        padding: 10px;
+    }
+
+
+
+    .menu-item__card-text{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+        color: #4d4d4d;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    } 
+    
+    &__card-title{
+        display: block;
+    }
+}

@@ -1,13 +1,17 @@
 .heart {
-    fas{
+    position: relative;
+    .fas{
         display: none;
-        display: flex;
-        flex-direction: row;
+    }
+
+    &__label{
+        position: absolute;
+        right:0;
+        
     }
     
     &__checkbox {
         display: none;
-    
 
       &:checked + label {
         background: rgb(180,13,175);
@@ -16,9 +20,7 @@
         -webkit-background-clip: text;
         color: transparent;
         font-size: 150%;
-        position: absolute;
-        right: 20px;
-        top: 75%;
+    
 
         .fas {
             display: inline;

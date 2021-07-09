@@ -56,7 +56,16 @@
 
   .card--description{
     padding: 10px 15px;
+    display: flex;
+
+    &__name {
+      flex-grow: 1;
+    }
   }
+
+  
+
+  
 
   
 

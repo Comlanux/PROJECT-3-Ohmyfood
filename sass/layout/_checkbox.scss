@@ -1,0 +1,37 @@
+input {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+}
+
+.menu-item__checkbox {
+    display: none;
+}
+
+.menu-item__card-checked {
+    width: 0;
+    overflow:hidden ;
+    background-color: #99e2d0;
+    color: #fff;
+    font-size: 150%;
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__checkbox:checked + label .card-checked {
+    width: 50px;
+     }
+}
+
+.menu-item__checkbox:checked + label .check-icon {
+    transform: rotate(36  0deg);
+    transition-duration: 600ms;
+
+    &__check-icon {
+    transform: rotate(0deg);
+    }
+}    
+
