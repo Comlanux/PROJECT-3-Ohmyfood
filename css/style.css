@@ -43,7 +43,7 @@ body .site--name {
   color: #4d4d4d;
   padding: 0 25px 25px 25px;
 }
-.explore .button {
+.explore .explore__button {
   border-radius: 30px;
   color: #fff;
   padding: 17px 26px;
@@ -52,7 +52,9 @@ body .site--name {
   background: linear-gradient(175deg, #ff79da 0%, #9356dc 98%);
   box-shadow: 3px 3px 14px 0px #a7a7a7;
   transform: scale(1);
-  transition: transform 400ms;
+}
+.explore .explore__button:hover {
+  transform: scale(1.15);
 }
 .explore .anchor {
   text-decoration: none;
