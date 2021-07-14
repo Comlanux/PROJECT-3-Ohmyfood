@@ -102,7 +102,7 @@ body .site--name {
   padding: 15px 30px 15px 40px;
   font-weight: bold;
   transform: scale(1);
-  transform: transform 400ms;
+  transition: transform 400ms;
 }
 .choice-list__item--highlight {
   background-color: #f5edfe;
@@ -120,6 +120,11 @@ body .site--name {
   padding: 5px 10px;
   position: absolute;
   left: -15px;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .restaurant--card {
@@ -301,6 +306,7 @@ body .site--name {
 }
 .menu-item__card-title {
   display: block;
+  margin-bottom: 5px;
 }
 
 .background-img {
@@ -461,15 +467,16 @@ label {
   align-items: center;
   justify-content: center;
 }
-.menu-item__card-checked__checkbox:checked + label .card-checked {
-  width: 50px;
-}
 
-.menu-item__checkbox:checked + label .check-icon {
-  transform: rotate(36 0deg);
+.menu-item__check-icon {
+  transform: rotate(360deg);
   transition-duration: 600ms;
 }
-.menu-item__checkbox:checked + label .check-icon__check-icon {
+
+.menu-item__checkbox:checked + label .menu-item__card-checked {
+  width: 50px;
+}
+.menu-item__checkbox:checked + label .menu-item__check-icon {
   transform: rotate(0deg);
 }
 

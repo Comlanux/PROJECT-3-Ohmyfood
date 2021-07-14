@@ -14,7 +14,7 @@
    padding: 15px 30px 15px 40px;
    font-weight: bold;
    transform: scale(1);
-   transform: transform 400ms;
+   transition: transform 400ms;
    
    &--highlight{
        background-color: #f5edfe;
@@ -37,5 +37,10 @@
         position: absolute;
         left:-15px;
     }
+  }
+
+  h2 {
+      margin-top: 20px;
+      margin-bottom: 20px;
   }
 

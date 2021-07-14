@@ -21,17 +21,19 @@ label {
     align-items: center;
     justify-content: center;
 
-    &__checkbox:checked + label .card-checked {
-    width: 50px;
-     }
+}
+.menu-item__check-icon {
+    transform: rotate(360deg);
+    transition-duration: 600ms;
 }
 
-.menu-item__checkbox:checked + label .check-icon {
-    transform: rotate(36  0deg);
-    transition-duration: 600ms;
 
-    &__check-icon {
+.menu-item__checkbox:checked + label {
+  .menu-item__card-checked{
+        width: 50px;                 
+  }
+
+ .menu-item__check-icon {
     transform: rotate(0deg);
-    }
-}    
-
+   }
+}
