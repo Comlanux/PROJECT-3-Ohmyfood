@@ -1,13 +1,17 @@
 .menu--fade{
     animation-name: menu-fade;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     opacity: 0;
 }
 
 .menu--fade-1 {
-    animation-delay: 0.1s;
+    animation-delay: 1s;
+}
+
+.menu--fade-2 {
+    animation-delay: 2s;
 }
 
 @keyframes menu-fade {
