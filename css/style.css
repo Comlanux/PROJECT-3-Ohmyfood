@@ -6,6 +6,32 @@
   margin-bottom: 20px;
 }
 
+.menu--fade {
+  animation-name: menu-fade;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.menu--fade-1 {
+  animation-delay: 1s;
+}
+
+.menu--fade-2 {
+  animation-delay: 2s;
+}
+
+@keyframes menu-fade {
+  0% {
+    opacity: 0;
+    transform: translate(0, 200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
 *,
 *::after,
 *::before {
@@ -44,7 +70,12 @@ body .site--name {
   padding: 0 25px 25px 25px;
   margin: 10px;
 }
-.explore .explore__button {
+.explore .anchor {
+  text-decoration: none;
+  color: #fff;
+}
+
+.explore__button {
   border-radius: 30px;
   color: #fff;
   padding: 17px 26px;
@@ -53,13 +84,12 @@ body .site--name {
   background: linear-gradient(175deg, #ff79da 0%, #9356dc 98%);
   box-shadow: 3px 3px 14px 0px #a7a7a7;
   transform: scale(1);
+  transition-property: transform;
+  transition-duration: 400ms;
+  cursor: pointer;
 }
-.explore .explore__button:hover {
+.explore__button:hover {
   transform: scale(1.15);
-}
-.explore .anchor {
-  text-decoration: none;
-  color: #fff;
 }
 
 .heart {
@@ -358,59 +388,35 @@ h2 {
   padding: 0 15px;
 }
 
-.menu--fade {
-  animation-name: menu-fade;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-
-.menu--fade-1 {
-  animation-delay: 1s;
-}
-
-.menu--fade-2 {
-  animation-delay: 2s;
-}
-
-@keyframes menu-fade {
-  0% {
-    opacity: 0;
-    transform: translate(0, 200px);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-.loader {
-  background-color: #fff;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: opacity 2s;
-  animation-name: loader-fade;
-  animation-duration: 2s;
-  animation-delay: 2s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
 @keyframes loader-fade {
   0% {
     opacity: 1;
   }
+  99% {
+    bottom: 0;
+  }
   100% {
-    display: none;
     opacity: 0;
+    bottom: 9999px;
   }
 }
+.loader {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  animation-name: loader-fade;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
 .lds-ring {
   display: inline-block;
   position: relative;

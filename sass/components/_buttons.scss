@@ -15,26 +15,27 @@
         margin: 10px;
     }
 
-    .explore__button {
-        border-radius: 30px;
-        color: #fff;
-        padding: 17px 26px;
-        text-decoration: none;
-        background: #ff79da;
-        background: linear-gradient(175deg, #ff79da 0%, #9356dc 98%);
-        box-shadow: 3px 3px 14px 0px #a7a7a7;
-        transform: scale(1);
-
-        &:hover{
-            transform: scale(1.15);
-        }
-
-    }
-
-
 
     .anchor {
         text-decoration: none;
         color: #fff;
     }
+}
+
+.explore__button {
+    border-radius: 30px;
+    color: #fff;
+    padding: 17px 26px;
+    text-decoration: none;
+    background: #ff79da;
+    background: linear-gradient(175deg, #ff79da 0%, #9356dc 98%);
+    box-shadow: 3px 3px 14px 0px #a7a7a7;
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 400ms;
+    cursor: pointer;
+    
+    &:hover{
+        transform: scale(1.15);
+    }    
 }

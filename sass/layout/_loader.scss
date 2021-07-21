@@ -1,57 +1,36 @@
-.menu--fade{
-    animation-name: menu-fade;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    opacity: 0;
-}
+@keyframes loader-fade {
 
-.menu--fade-1 {
-    animation-delay: 1s;
-}
+    0% {
+        opacity: 1;
+       
+    }
 
-.menu--fade-2 {
-    animation-delay: 2s;
-}
-
-@keyframes menu-fade {
-    0%{
-        opacity: 0;
-        transform: translate(0, 200px);
+    99% {
+        bottom: 0;
     }
     100% {
-        opacity: 1;
-        transform: translate(0);
+        opacity: 0;
+        bottom: 9999px;
     }
+    
 }
-
 .loader {
     background-color: #fff;
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: opacity 2s;
     animation-name: loader-fade;
     animation-duration: 2s;
     animation-delay: 2s;
-    animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
 }
 
-@keyframes loader-fade {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        display: none;
-        opacity: 0;
-    }
-}
 
 .lds-ring {
     display: inline-block;

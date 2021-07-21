@@ -1,0 +1,27 @@
+.menu--fade{
+    animation-name: menu-fade;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    
+}
+
+.menu--fade-1{
+    animation-delay: 1s;
+}
+.menu--fade-2{
+    animation-delay: 2s;
+}
+
+
+@keyframes menu-fade {
+    0%{
+        opacity: 0;
+        transform: translate(0, 200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
